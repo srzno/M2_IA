@@ -5,19 +5,18 @@ https://drive.google.com/drive/folders/1y81hudQd1ExQyfYo0CJX8BE1wbcRrjsH?usp=sha
 
 ### 🌭 Hotdog | Not Hotdog Dataset
 
-Here you will find the test and training images for the Hotdog | Not Hotdog dataset. The goal is to have a fun set of images to use for binary classification. See the code section for examples of models that work well for this purpose.
+Aquí encontrarás las imágenes de prueba y entrenamiento del Hotdog | No es un conjunto de datos de Hotdog. El objetivo es tener un conjunto divertido de imágenes para usar en la clasificación binaria. Consulte la sección de códigos para ver ejemplos de modelos que funcionan bien para este propósito.
 
-#### Files
+#### Archivos
 
-This dataset contains:
+Contenido del dataset:
 
-- **Training** images to be used for developing a binary classification model
-    - `2121` images of hot dogs, and `2121` images of other items
-- **Test** images to be used after training a binary classification model
-    - `200` images of hot dogs, and `200` images of other items
+- **Training** imágenes que se utilizarán para desarrollar un modelo de clasificación binaria.
+     - Imágenes `2121` de perritos calientes e imágenes `2121` de otros artículos.
+- **Test** Imágenes que se utilizarán después de entrenar un modelo de clasificación binaria.
+     - `200` imágenes de hot dogs y `200` imágenes de otros artículos
 
-The total number of images is, of course, `2x2121` for training and `2x200` for testing, with a total of `4,642` files.
-
+El número total de imágenes es, por supuesto, `2x2121` para entrenamiento y `2x200` para pruebas, con un total de `4642` archivos.
     .
     ├── hotdog-nothotdog 
         ├── test
