@@ -17,6 +17,7 @@ Contenido del dataset:
      - `200` imágenes de hot dogs y `200` imágenes de otros artículos
 
 El número total de imágenes es, por supuesto, `2x2121` para entrenamiento y `2x200` para pruebas, con un total de `4642` archivos.
+    
     .
     ├── hotdog-nothotdog 
         ├── test
