@@ -1,4 +1,9 @@
-# M2_IA
+# Módulo 2: Inteligencia Artificial
+
+El objetivo de este repositorio es crear un reconocedor de imagenes que sea capaz de distinguir entre un Hotdog y algun otro objeto que no sea un hotdog, haciendo referencia a la serie de Silicon Valley.
+
+### Referencia de el dataset:
+https://www.kaggle.com/datasets/thedatasith/hotdog-nothotdog/data
 
 ## Dataset: 
 https://drive.google.com/drive/folders/1y81hudQd1ExQyfYo0CJX8BE1wbcRrjsH?usp=sharing
