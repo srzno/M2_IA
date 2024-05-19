@@ -22,6 +22,8 @@ Contenido del dataset:
      - `200` imágenes de hot dogs y `200` imágenes de otros artículos
 
 El número total de imágenes es de `4642` archivos.
+
+La división 90% train - 10% test es ideal para este modelo simple de hot dogs. El 90% de entrenamiento garantiza un aprendizaje profundo, mientras que el 10% de prueba permite una evaluación precisa. Si es necesario, se puede usar el aumento de datos para ampliar el conjunto de entrenamiento.
     
     .
     ├── hotdog-nothotdog 
