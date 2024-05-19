@@ -10,7 +10,7 @@ https://drive.google.com/drive/folders/1y81hudQd1ExQyfYo0CJX8BE1wbcRrjsH?usp=sha
 
 ### 🌭 Hotdog | Not Hotdog Dataset
 
-Aquí encontrarás las imágenes de prueba y entrenamiento del Hotdog | No es un conjunto de datos de Hotdog. El objetivo es tener un conjunto divertido de imágenes para usar en la clasificación binaria. Consulte la sección de códigos para ver ejemplos de modelos que funcionan bien para este propósito.
+Aquí encontrarás las imágenes de prueba y entrenamiento del Hotdog | Not Hotdog. El objetivo es tener un conjunto divertido de imágenes para usar en la clasificación binaria. Consulte la sección de códigos para ver ejemplos de modelos que funcionan bien para este propósito.
 
 #### Archivos
 
