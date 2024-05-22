@@ -17,7 +17,7 @@ Aquí encontrarás las imágenes de prueba y entrenamiento del Hotdog | Not Hotd
 Contenido del dataset:
 
 - **Training** imágenes que se utilizarán para desarrollar un modelo de clasificación binaria.
-     - Imágenes `2021` de perritos calientes e imágenes `2021` de otros artículos.
+     - Imágenes `2021` de hot dogs e imágenes `2021` de otros artículos.
 - **Validation** Imágenes que se utilizarán después de entrenar un modelo de clasificación binaria pero antes de probarlo.
      - `100` imágenes de hot dogs y `100` imágenes de otros artículos
 - **Test** Imágenes que se utilizarán después de entrenar un modelo de clasificación binaria.
@@ -38,3 +38,15 @@ La división 85% train - 10% test - 5% validation es ideal para este modelo simp
         ├── train
             ├── hotdog
             ├── nothotdog
+
+## Preprocesado de los datos
+
+Utilice imageGenerator para ampliar y enriquecer el conjunto de datos de entrenamiento ("train") del modelo de aprendizaje automático mediante la modificación creativa de las imágenes existentes. De esta manera, generará un conjunto de datos más robusto que permitirá un entrenamiento más efectivo de su modelo, lo que se traduce en un mejor rendimiento y resultados más precisos.
+
+`train_datagen = ImageDataGenerator(
+							rescale = 1./255,
+							rotation_range = 150,
+							width_shift_range = 0.1,
+							height_shift_range = 0.1,
+							shear_range = 0.2,
+							horizontal_flip = True)`
