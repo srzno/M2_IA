@@ -17,19 +17,24 @@ Aquí encontrarás las imágenes de prueba y entrenamiento del Hotdog | Not Hotd
 Contenido del dataset:
 
 - **Training** imágenes que se utilizarán para desarrollar un modelo de clasificación binaria.
-     - Imágenes `2121` de perritos calientes e imágenes `2121` de otros artículos.
+     - Imágenes `2021` de perritos calientes e imágenes `2021` de otros artículos.
+- **Validation** Imágenes que se utilizarán después de entrenar un modelo de clasificación binaria pero antes de probarlo.
+     - `100` imágenes de hot dogs y `100` imágenes de otros artículos
 - **Test** Imágenes que se utilizarán después de entrenar un modelo de clasificación binaria.
      - `200` imágenes de hot dogs y `200` imágenes de otros artículos
 
 El número total de imágenes es de `4642` archivos.
 
-La división 90% train - 10% test es ideal para este modelo simple de hot dogs. El 90% de entrenamiento garantiza un aprendizaje profundo, mientras que el 10% de prueba permite una evaluación precisa. Si es necesario, se puede usar el aumento de datos para ampliar el conjunto de entrenamiento.
+La división 85% train - 10% test - 5% validation es ideal para este modelo simple de hot dogs. El 90% de entrenamiento garantiza un aprendizaje profundo, mientras que el 10% de prueba permite una evaluación precisa. Si es necesario, se puede usar el aumento de datos para ampliar el conjunto de entrenamiento.
     
     .
     ├── hotdog-nothotdog 
         ├── test
             ├── hotdog
             ├── nothotdog   
+        ├── validation
+            ├── hotdog
+            ├── nothotdog
         ├── train
             ├── hotdog
             ├── nothotdog
