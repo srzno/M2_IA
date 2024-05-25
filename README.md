@@ -70,3 +70,20 @@ Utilizamos un rango de corte de 0.2 para aplicar transformaciones que inclinan l
 
 - Inversión horizontal (horizontal_flip):
 Habilitamos la inversión horizontal para reflejar las imágenes aleatoriamente, duplicando el número de muestras de entrenamiento y mejorando la capacidad del modelo para reconocer objetos en distintas orientaciones.
+
+## Implementación y Evaluación inicial del modelo
+
+El objetivo de este proyecto es desarrollar un modelo de clasificación de imágenes capaz de distinguir entre hotdogs y no hotdogs. Inicialmente, seleccioné MoBiNet, un modelo prometedor por su eficiencia en términos de uso de memoria y costo computacional. Sin embargo, al implementarlo, no obtuve la precisión esperada y decidí explorar alternativas basadas en investigaciones y conocimientos adquiridos en clase.
+
+Para encontrar una mejor solución, revisé varias arquitecturas de redes neuronales convolucionales (CNN). Me inspiré particularmente en el paper "Deep Residual Learning for Image Recognition" de Kaiming He, Xiangyu Zhang, Shaoqing Ren y Jian Sun, que introduce la arquitectura ResNet. ResNet utiliza conexiones residuales para facilitar el entrenamiento de redes profundas, mejorando significativamente la precisión en tareas de reconocimiento de imágenes.
+
+Basándome en los principios de ResNet y en conocimientos adquiridos en clase, diseñé una arquitectura CNN más simple y robusta. Este nuevo modelo incluyó varias capas de convolución y max pooling, seguidas de capas densas para la clasificación final.
+
+Elegí utilizar TensorFlow y Keras por su simplicidad, flexibilidad y amplio soporte comunitario. Estas herramientas permiten construir, entrenar y desplegar modelos de manera eficiente. Seleccioné la métrica de **accuracy* porque es intuitiva y refleja directamente la proporción de predicciones correctas realizadas por el modelo. Dado que mi conjunto de datos está balanceado, la accuracy es una métrica adecuada para evaluar la eficacia del clasificador.
+
+El proceso de selección y ajuste del modelo es crucial en cualquier proyecto de aprendizaje automático. Aunque MoBiNet ofrecía ventajas teóricas, la implementación práctica reveló limitaciones en mi caso específico. Inspirado por los principios de redes residuales y utilizando conocimientos adquiridos en clase, logré diseñar una CNN más efectiva. La elección del framework TensorFlow/Keras y la métrica de accuracy facilitó la construcción y evaluación del modelo, permitiéndome mejorar el rendimiento en la tarea de clasificación de imágenes de hotdogs vs. no hotdogs.
+
+### Referencias
+He, K., Zhang, X., Ren, S., & Sun, J. (2016). "Deep Residual Learning for Image Recognition." Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, 770-778. https://arxiv.org/abs/1512.03385 
+
+Yan, S., Yao, G., & Liu, X. (2019). "MoBiNet: A Mobile Binary Network for Image Classification." arXiv preprint. https://arxiv.org/abs/1907.12629 
