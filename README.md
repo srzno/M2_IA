@@ -87,6 +87,7 @@ El proceso de selección y ajuste del modelo es crucial en cualquier proyecto de
 
 ### Matriz de Confusión:
 
+![Matriz de Confusión v1](https://github.com/srzno/M2_IA/blob/readme-img/confusion_matrix.png)
 
 - Los verdaderos positivos (TP) representan las muestras que fueron correctamente clasificadas como "hotdog". Según la matriz de confusión proporcionada, hay 198 verdaderos positivos.
 - Los falsos positivos (FP) son las muestras que fueron incorrectamente clasificadas como "hotdog" cuando en realidad son "not hotdog". Según la matriz de confusión, hay 2 falsos positivos.
