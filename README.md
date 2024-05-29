@@ -85,6 +85,16 @@ El proceso de selección y ajuste del modelo es crucial en cualquier proyecto de
 
 ## Evaluación inicial del modelo
 
+### Accuracy y Loss
+![Gráfica acc y loss](https://github.com/srzno/M2_IA/blob/main/plt_v1.png)
+
+Después de analizar los resultados de precisión y pérdida de mi modelo, observo que la precisión alcanzó un valor de alrededor del 63.75% en el conjunto de prueba, lo que indica que mi modelo puede predecir correctamente la clase de una imagen (ya sea "hotdog" o "not hotdog") aproximadamente dos tercios del tiempo. Si bien esta precisión no es excepcionalmente alta, es un punto de partida decente para mi modelo.
+
+En cuanto a la pérdida, parece que ha disminuido gradualmente durante las primeras épocas del entrenamiento, lo que sugiere que mi modelo estaba mejorando y ajustándose a los datos de entrenamiento. Sin embargo, la pérdida en el conjunto de validación comenzó a aumentar después de algunas épocas, lo que indica un posible sobreajuste. Esto significa que mi modelo podría estar memorizando los datos de entrenamiento en lugar de aprender patrones generales que se apliquen a nuevos datos.
+
+Basándome en estos resultados, creo que mi modelo tiene un buen potencial para clasificar imágenes de "hotdog" y "not hotdog", pero necesita cierto ajuste para mejorar su generalización a nuevos datos. Para abordar esto, podría considerar técnicas como la regularización, la optimización de hiperparámetros o la recolección de más datos para aumentar la diversidad de mi conjunto de entrenamiento. En conclusión, el objetivo es mejorar tanto la precisión como la pérdida en el conjunto de validación para lograr un rendimiento más robusto y generalizable de mi modelo.
+
+
 ### Matriz de Confusión:
 
 ![Matriz de Confusión v1](https://github.com/srzno/M2_IA/blob/readme-img/confusion_matrix.png)
