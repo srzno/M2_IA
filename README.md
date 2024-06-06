@@ -109,7 +109,7 @@ Este modelo es significativamente peor porque falla en detectar correctamente lo
 
 ## Evaluación de modelo mejorado
 
-### Implementaación de modelo (Mejorado)
+### Implementación de modelo (Mejorado)
 
 - Utilizamos el modelo ResNet50 preentrenado en la base de datos ImageNet, lo que permite aprovechar las características aprendidas en un gran conjunto de datos. Esto mejora significativamente la capacidad del modelo para generalizar en la tarea de clasificación.
 - Las imágenes de entrada se ajustaron al tamaño que ResNet50 espera, es decir, (224, 224, 3). Esto asegura que las dimensiones de las imágenes sean compatibles con la arquitectura de ResNet50.
@@ -122,7 +122,7 @@ Este modelo es significativamente peor porque falla en detectar correctamente lo
 - Se entrenó el modelo usando los conjuntos de datos de entrenamiento y validación con un número específico de épocas.
 
 ### Accuracy y Loss (Mejorado)
-![Gráfica acc y loss_v3](https://github.com/srzno/M2_IA/blob/main/plt_v3.png)
+![Gráfica acc y loss_v3](https://github.com/srzno/M2_IA/blob/main/plt_v3.jpeg)
 - **Accuracy:**
 La accuracy de entrenamiento aumenta de manera constante y llega a más del 92%.
 La accuracy de validación es relativamente alta y estable alrededor del 85%, lo cual muestra un buen rendimiento general sin señales significativas de sobreajuste.
@@ -132,7 +132,7 @@ La pérdida de entrenamiento disminuye constantemente, indicando que el modelo e
 La pérdida de validación también disminuye inicialmente y se estabiliza, mostrando que el modelo no está sobreajustando significativamente.
 
 ### Matriz de Confusión (Mejorado):
-![Matriz de Confusión v3](https://github.com/srzno/M2_IA/blob/readme-img/confusion_matrix3.png)
+![Matriz de Confusión v3](https://github.com/srzno/M2_IA/blob/main/confusion_matrix3.jpeg)
 - **Precisión y Recall:**
 Alta precisión y recall para los hotdogs (Hotdog), con un buen equilibrio entre falsos positivos y falsos negativos.
 Tiene una cantidad significativa de verdaderos positivos (163) y verdaderos negativos (183), mostrando una buena capacidad de identificación correcta para ambas clases.
