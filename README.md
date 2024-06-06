@@ -85,8 +85,8 @@ El proceso de selección y ajuste del modelo es crucial en cualquier proyecto de
 
 ## Evaluación inicial del modelo
 
-### Accuracy y Loss
-![Gráfica acc y loss](https://github.com/srzno/M2_IA/blob/main/plt_v1.png)
+### Accuracy y Loss (Inicial)
+![Gráfica acc y loss_v1](https://github.com/srzno/M2_IA/blob/main/plt_v1.png)
 
 Después de analizar los resultados de precisión y pérdida de mi modelo, observo que la precisión alcanzó un valor de alrededor del 63.75% en el conjunto de prueba, lo que indica que mi modelo puede predecir correctamente la clase de una imagen (ya sea "hotdog" o "not hotdog") aproximadamente dos tercios del tiempo. Si bien esta precisión no es excepcionalmente alta, es un punto de partida decente para mi modelo.
 
@@ -95,14 +95,17 @@ En cuanto a la pérdida, parece que ha disminuido gradualmente durante las prime
 Basándome en estos resultados, creo que mi modelo tiene un buen potencial para clasificar imágenes de "hotdog" y "not hotdog", pero necesita cierto ajuste para mejorar su generalización a nuevos datos. Para abordar esto, podría considerar técnicas como la regularización, la optimización de hiperparámetros o la recolección de más datos para aumentar la diversidad de mi conjunto de entrenamiento. En conclusión, el objetivo es mejorar tanto la precisión como la pérdida en el conjunto de validación para lograr un rendimiento más robusto y generalizable de mi modelo.
 
 
-### Matriz de Confusión:
+### Matriz de Confusión (Inicial):
 
 ![Matriz de Confusión v1](https://github.com/srzno/M2_IA/blob/readme-img/confusion_matrix.png)
 
-- Los verdaderos positivos (TP) representan las muestras que fueron correctamente clasificadas como "hotdog". Según la matriz de confusión proporcionada, hay 198 verdaderos positivos.
-- Los falsos positivos (FP) son las muestras que fueron incorrectamente clasificadas como "hotdog" cuando en realidad son "not hotdog". Según la matriz de confusión, hay 2 falsos positivos.
-- Los falsos negativos (FN) son las muestras que fueron incorrectamente clasificadas como "not hotdog" cuando en realidad son "hotdog". Según la matriz de confusión, hay 199 falsos negativos.
-- Los verdaderos negativos (TN) representan las muestras que fueron correctamente clasificadas como "not hotdog". Según la matriz de confusión, hay 1 verdadero negativo.
+- **Precisión y Recall:**
+Muy baja precisión y recall para los hotdogs (Hotdog), con solo 1 verdadero positivo y una cantidad extremadamente alta de falsos negativos (199).
+Aunque tiene muchos verdaderos negativos (198), casi no puede identificar correctamente los hotdogs.
+
+- **Errores:**
+Solo 2 falsos positivos, pero esto se debe a que casi siempre predice que la imagen no es un hotdog.
+Este modelo es significativamente peor porque falla en detectar correctamente los hotdogs.
 
 ## Evaluación de modelo mejorado
 
@@ -117,6 +120,25 @@ Basándome en estos resultados, creo que mi modelo tiene un buen potencial para 
 	- Dense (1 unidad, activación sigmoid): Capa de salida para clasificación binaria.
 - El modelo se compiló usando binary_crossentropy como la función de pérdida, el optimizador RMSprop con una tasa de aprendizaje de 1e-4, y la métrica de accuracy.
 - Se entrenó el modelo usando los conjuntos de datos de entrenamiento y validación con un número específico de épocas.
+
+### Accuracy y Loss (Mejorado)
+![Gráfica acc y loss_v3](https://github.com/srzno/M2_IA/blob/main/plt_v3.png)
+- **Accuracy:**
+La accuracy de entrenamiento aumenta de manera constante y llega a más del 92%.
+La accuracy de validación es relativamente alta y estable alrededor del 85%, lo cual muestra un buen rendimiento general sin señales significativas de sobreajuste.
+
+- **Loss:**
+La pérdida de entrenamiento disminuye constantemente, indicando que el modelo está aprendiendo bien.
+La pérdida de validación también disminuye inicialmente y se estabiliza, mostrando que el modelo no está sobreajustando significativamente.
+
+### Matriz de Confusión (Mejorado):
+![Matriz de Confusión v3](https://github.com/srzno/M2_IA/blob/readme-img/confusion_matrix3.png)
+- **Precisión y Recall:**
+Alta precisión y recall para los hotdogs (Hotdog), con un buen equilibrio entre falsos positivos y falsos negativos.
+Tiene una cantidad significativa de verdaderos positivos (163) y verdaderos negativos (183), mostrando una buena capacidad de identificación correcta para ambas clases.
+
+- **Errores:**
+37 falsos negativos y 17 falsos positivos indican que hay algunos errores, pero no son significativos en comparación con las predicciones correctas.
 
 ### Referencias
 [1] He, K., Zhang, X., Ren, S., & Sun, J. (2016). "Deep Residual Learning for Image Recognition." Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, 770-778. https://arxiv.org/abs/1512.03385 
