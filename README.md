@@ -71,7 +71,7 @@ Utilizamos un rango de corte de 0.2 para aplicar transformaciones que inclinan l
 - Inversión horizontal (horizontal_flip):
 Habilitamos la inversión horizontal para reflejar las imágenes aleatoriamente, duplicando el número de muestras de entrenamiento y mejorando la capacidad del modelo para reconocer objetos en distintas orientaciones.
 
-## Implementación del modelo
+## Implementación del modelo (Inicial)
 
 El objetivo de este proyecto es desarrollar un modelo de clasificación de imágenes capaz de distinguir entre hotdogs y no hotdogs. Inicialmente, seleccioné MoBiNet [2], un modelo prometedor por su eficiencia en términos de uso de memoria y costo computacional. Sin embargo, al implementarlo, no obtuve la precisión esperada y decidí explorar alternativas basadas en investigaciones y conocimientos adquiridos en clase.
 
@@ -103,6 +103,20 @@ Basándome en estos resultados, creo que mi modelo tiene un buen potencial para 
 - Los falsos positivos (FP) son las muestras que fueron incorrectamente clasificadas como "hotdog" cuando en realidad son "not hotdog". Según la matriz de confusión, hay 2 falsos positivos.
 - Los falsos negativos (FN) son las muestras que fueron incorrectamente clasificadas como "not hotdog" cuando en realidad son "hotdog". Según la matriz de confusión, hay 199 falsos negativos.
 - Los verdaderos negativos (TN) representan las muestras que fueron correctamente clasificadas como "not hotdog". Según la matriz de confusión, hay 1 verdadero negativo.
+
+## Evaluación de modelo mejorado
+
+### Implementaación de modelo (Mejorado)
+
+- Utilizamos el modelo ResNet50 preentrenado en la base de datos ImageNet, lo que permite aprovechar las características aprendidas en un gran conjunto de datos. Esto mejora significativamente la capacidad del modelo para generalizar en la tarea de clasificación.
+- Las imágenes de entrada se ajustaron al tamaño que ResNet50 espera, es decir, (224, 224, 3). Esto asegura que las dimensiones de las imágenes sean compatibles con la arquitectura de ResNet50.
+- Se usó ResNet50 como base del modelo con la configuración include_top=False, lo que excluye las capas de clasificación superiores para permitir la personalización. Se añadieron capas adicionales específicas para nuestro problema:
+- GlobalAveragePooling2D: Reduce las dimensiones de los mapas de características.
+	- Dense (128 unidades, activación relu): Añade una capa densa para aprendizaje de características específicas.
+	- Dropout (50%): Evita el sobreajuste.
+	- Dense (1 unidad, activación sigmoid): Capa de salida para clasificación binaria.
+- El modelo se compiló usando binary_crossentropy como la función de pérdida, el optimizador RMSprop con una tasa de aprendizaje de 1e-4, y la métrica de accuracy.
+- Se entrenó el modelo usando los conjuntos de datos de entrenamiento y validación con un número específico de épocas.
 
 ### Referencias
 [1] He, K., Zhang, X., Ren, S., & Sun, J. (2016). "Deep Residual Learning for Image Recognition." Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, 770-778. https://arxiv.org/abs/1512.03385 
