@@ -8,6 +8,10 @@ https://www.kaggle.com/datasets/thedatasith/hotdog-nothotdog/data
 ## Dataset: 
 https://drive.google.com/drive/folders/1y81hudQd1ExQyfYo0CJX8BE1wbcRrjsH?usp=sharing
 
+## Modelo Actual
+[hotdog_v3.ipynb](https://github.com/srzno/M2_IA/blob/main/hotdog_v3.ipynb)
+
+
 ### 🌭 Hotdog | Not Hotdog Dataset
 
 Aquí encontrarás las imágenes de prueba y entrenamiento del Hotdog | Not Hotdog. El objetivo es tener un conjunto divertido de imágenes para usar en la clasificación binaria. Consulte la sección de códigos para ver ejemplos de modelos que funcionan bien para este propósito.
@@ -139,6 +143,11 @@ Tiene una cantidad significativa de verdaderos positivos (163) y verdaderos nega
 
 - **Errores:**
 37 falsos negativos y 17 falsos positivos indican que hay algunos errores, pero no son significativos en comparación con las predicciones correctas.
+
+## Conclusiones
+En este proyecto, implementamos un modelo de clasificación de imágenes utilizando la arquitectura preentrenada ResNet50 y lo comparamos con un modelo CNN creado desde cero. El uso de ResNet50, que se benefició de las características aprendidas de la base de datos ImageNet, resultó en una precisión significativamente mayor. La matriz de confusión del modelo ResNet50 mostró una alta precisión, con 163 verdaderos positivos y 183 verdaderos negativos, en contraste con el modelo inicial que tuvo una precisión extremadamente baja, con solo 1 verdadero positivo y 198 verdaderos negativos.
+
+Las gráficas de precisión y pérdida también reflejaron mejoras sustanciales. El modelo basado en ResNet50 alcanzó una precisión de entrenamiento superior al 92% y mantuvo una precisión de validación estable alrededor del 85%, mientras que el modelo inicial mostró una precisión de entrenamiento baja y una pérdida que se mantuvo constante, indicando un mal ajuste. Estos resultados demuestran que el uso de modelos preentrenados como ResNet50, junto con una adecuada personalización y técnicas de entrenamiento, puede mejorar significativamente el rendimiento en tareas específicas de clasificación de imágenes.
 
 ### Referencias
 [1] He, K., Zhang, X., Ren, S., & Sun, J. (2016). "Deep Residual Learning for Image Recognition." Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, 770-778. https://arxiv.org/abs/1512.03385 
